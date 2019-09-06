@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body style="height: 1400px;">
+        <div class="container" style="margin-top: 50px;">
+            <div row="row">
+                <div class="col-xl-12 text-center" style="height: 300px; background-color: lavender;">
+                    <h1 style="font-size: 80px;">Simple bartender</h1>
+                    <hr>
+                    <h2 style="font-size: 40px;">Create Manager Account</h2>
+                    <button style="margin-top: 15px; height: 50px; width: 150px; font-size: 20px" type="button" class="btn btn-primary back">Back</button>
+ 
+
+                </div>
+            </div>
+            
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-xl-12">
+                    
+                    <div class="card">
+                        <div class="card-header"><h5 style="display: inline;">Make Account</h5><h5 style="display: inline; margin-left: 150px; color: crimson; text-align: center;" class="error"></h5></div>
+                      <div class="card-body">
+
+                        <form>
+
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Full Name</h5>
+                            <input type="text" class="form-control full-name" id="colFormLabel" placeholder="Name...">
+                            </div>
+                          </div>
+                            
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Profile Image</h5>
+                            <input type="text" class="form-control profile-image" id="colFormLabel1" placeholder="Profile Image Url...">
+                            </div>
+                          </div>
+                         
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Password</h5>
+                            <input type="password" class="form-control password" id="colFormLabel2" placeholder="Password...">
+                            </div>
+                          </div>
+                            
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5> Retype Password</h5>
+                            <input type="password" class="form-control retype-password" id="colFormLabel3" placeholder="Retype Password...">
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Location Name</h5>
+                            <input type="text" class="form-control location-name" id="colFormLabel4" placeholder="Location Name...">
+                            </div>
+                          </div>
+                            
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Location City</h5>
+                            <input type="text" class="form-control location-city" id="colFormLabel5" placeholder="Location City...">
+                            </div>
+                          </div>
+                            
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Location Street Address</h5>
+                            <input type="text" class="form-control location-street-address" id="colFormLabel6" placeholder="Location Street Address...">
+                            </div>
+                          </div>
+                        
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Location Zip Code</h5>
+                            <input type="number" class="form-control location-zip-code" id="colFormLabel7" placeholder="Location Zip Code...">
+                            </div>
+                          </div>
+                            
+                          <div class="form-group row">
+                            
+                            <div class="col-sm-10">
+                            <h5>Location Image</h5>
+                            <input type="text" class="form-control location-image" id="colFormLabel8" placeholder="Location Image Url...">
+                            </div>
+                          </div>
+                            
+                        </form>
+                        
+                        
+                      </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+            <div row="row">
+                <div class="col-xl-12 text-center" style="height: 60px;">
+                    
+                    <button style="margin-top: 15px; height: 50px; width: 250px; font-size: 20px" type="button" class="btn btn-danger create-account">Create Account</button>
+ 
+
+                </div>
+            </div>
+
+        </div>  
+    </body>
+    
+<script type="text/javascript">
+    
+$(".create-account").on("click",function(){
+
+var fullName = $(".full-name").val();
+var password = $(".password").val();
+var locationName = $(".location-name").val();
+var locationCity = $(".location-city").val();
+var locationStreetAddress = $(".location-street-address").val();
+var locationZipCode = $(".location-zip-code").val();
+var locationImage = $(".location-image").val();
+    
+var array = {params : [fullName,profileImage,password,locationName,locationCity,locationStreetAddress,locationZipCode,locationImage]};    
+
+console.log(array);
+    
+$.ajax("/api/manager",{
+    type: "POST",
+    data: array
+});   
+
+});
+    
+</script>
+
+</html>

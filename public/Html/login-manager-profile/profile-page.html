@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Bartender</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/manager-profile-page-stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+  
+ <script src="https://kit.fontawesome.com/0fad8f3a25.js"></script>
+
+  
+</head>
+<body>
+
+<h2 style="margin-top: 1100px;">Simple Bartender</h2>
+<div class="no-gutter box animated slideInLeft">
+
+    <div class="no-gutter">
+    
+        <div class="row">
+            
+            <div style="width: 400px;" class="col-xl-6">
+            <img src=""  class="location-image" style="width: 300px; height:  300px; margin-left: 30px; margin-top: 30px; display: inline-block;">
+            </div>
+            <div style="width: 400px; margin-top: 30px; font-size: 15px;" class="col-xl-6">
+            <h5 class="manager-name" style="margin-bottom: 30px;">Manager Name:</h5>
+            <h5 class="location-name" style="margin-bottom: 30px;">Location Name:</h5>
+            <h5 class="city" style="margin-bottom: 30px;">City:</h5>
+            <h5 class="street-name" style="margin-bottom: 30px;">Street Name:</h5>
+            <h5 class="zipcode" style="margin-bottom: 30px;">Zipcode:</h5>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    
+</div>
+    
+<div class="no-gutter box animated slideInRight" style="margin-top: 30px;">
+
+    <div class="no-gutter">
+    
+
+    <h1 class="text-center" style="margin-top: 10px;">Create Beverage</h1>
+
+                <form>
+                  <div style="margin-left: 30px; width: 700px;" class="form-group">
+                    <label for="exampleInputEmail1">Beverage Name</label>
+                    <input type="text" class="form-control beverage-name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beverage Name">
+                  </div>
+                  
+                  <div style="margin-left: 30px; width: 700px;" class="form-group">
+                    <label for="exampleInputPassword1">Beverage Cost</label>
+                    <input type="number" class="form-control beverage-cost" id="exampleInputPassword1" placeholder="Beverage Cost">
+                  </div>
+
+                  <button class="create-beverage" style="margin-top: 50px; margin-bottom: 10px; margin: auto; display: block;">Create Beverage</button>
+                </form>
+            
+            
+        
+        
+    </div>
+
+
+    
+</div>
+    
+<div class="no-gutter box animated slideInLeft" style="margin-top: 30px; overflow-y: scroll;">
+
+<h1 class="text-center" style="margin-top: 10px;">Beverage List</h1>
+<hr>
+<ul class="beverage-list">
+
+</ul>                   
+</div>
+    
+<div class="no-gutter box animated slideInRight" style="margin-top: 30px; margin-bottom: 30px; overflow-y: scroll;">
+
+<h1 class="text-center" style="margin-top: 10px;">Transactions</h1>
+<hr>
+
+<ul class="orders-list">
+
+</ul>
+        
+</div>
+    
+<h1 class="text-center total-made" style="margin-top: 10px; margin-bottom: 30px;">Total Made: $0</h1>
+
+<script src="/manager-profile-page-javascript"></script>
+</body>
+</html>
+
+

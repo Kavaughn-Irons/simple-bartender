@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Bartender</title>
+
+  <link rel="stylesheet" href="/customer-home-page-stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/0fad8f3a25.js"></script>
+
+  
+</head>
+<body>
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input class="username" type="text" placeholder="Username" />
+			<input class="email" type="email" placeholder="Email" />
+			<input class="password" type="password" placeholder="Password" />
+			<input class="password-retype" type="password" placeholder="Retype Password" />
+			<button class="sign-up" style="margin-top: 5px;">Sign Up</button>
+            <h4 class="errors" style="color: red;"></h4>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign In</h1>
+			<input class="username-sign-in" type="text" placeholder="Username" />
+			<input class="password-sign-in" type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button class="sign-in">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Already got Account?</h1>
+				<p>just sign in</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>New to Simple Bartender?</h1>
+				<p>Enter a few details and get started.</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/customer-home-page-javascript"></script>
+</body>
+</html>
+
+
